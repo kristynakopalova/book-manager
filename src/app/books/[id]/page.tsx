@@ -26,15 +26,9 @@ export default function Page({ params }: { params: { id: string } }) {
           <div className="book_information">
             <div className="more_information">
               <p>Author: {data.author}</p>
-              <p>Publisher: </p>
-              <p>Published: </p>
-              <p>
-                Description: cbhjlewfc bdwjkf bkjfh nvjkbe jei ui gzgzř tízřiuhr
-                fjk nmpok dfsadfoliugzfdsdfgzuiopiuzgfd sdfgzuiouz tdsasdfgzio
-                pdsadftzu ioudsdfgzko,esad fgz uhes dfg zhuio esasdfgzh uo pewas
-                drt zuioé iaaSD FGHJK LŮK SAD FGHJKIJHG FDSFGH JKLJHG FDSAS
-                DFGHOI UZTFDSA iuztd rszuio uztfdsd fghuiuz tfrdesauztrdes
-              </p>
+              <p>Publisher: {data.publisher} </p>
+              <p>Published: {data.published} </p>
+              <p>Description: {data.description}</p>
             </div>
             <img src={data.imageurl} alt={data.title} />
           </div>

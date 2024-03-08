@@ -16,9 +16,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header className="menu">
-          <Link href="/">Home</Link>
-          <Link href="/books">List of books</Link>
-          <Link href="/admin/books/new">Create a new book</Link>
+          <Link className="menu_item" href="/">
+            Home
+          </Link>
+          <Link className="menu_item" href="/books">
+            List of books
+          </Link>
+          <Link className="menu_item" href="/admin">
+            Admin
+          </Link>
         </header>
         {children}
       </body>

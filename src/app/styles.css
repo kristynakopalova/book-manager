@@ -6,13 +6,14 @@
 html,
 body {
   height: 100%;
+  background-color: rgb(236, 236, 236);
 }
 
 
 .full_page {
-  background-color: rgb(236, 236, 236);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .homepage_texts {
@@ -29,14 +30,16 @@ body {
 }
 
 .home_image {
-  max-width: 60%;
-  max-height: 90%;
+  max-height: 80vh;
+  margin-top: 40px;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-left: 20px;
+}
 
+.menu_item {
+  margin: 10px;
 }
