@@ -1,3 +1,6 @@
+// TODO: clear form after submit
+// TODO: input type url
+
 export default function Page() {
   async function createBook(formData: FormData) {
     'use server';
@@ -5,6 +8,8 @@ export default function Page() {
     const data = [
       {
         title: formData.get('title'),
+        author: formData.get('author'),
+        imageurl: formData.get('imageurl'),
       },
     ];
 
@@ -29,7 +34,12 @@ export default function Page() {
 
   return (
     <form action={createBook}>
-      <input type="text" name="title" />
+      <label>Title</label>
+      <input type="text" name="title" placeholder="title" />
+      <label>Author</label>
+      <input type="text" name="author" placeholder="author" />
+      <label>Image URL</label>
+      <input type="text" name="imageurl" placeholder="imageurl" />
       <button type="submit">Create a new book</button>
     </form>
   );

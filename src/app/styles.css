@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+.full_page {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepage_texts {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.title {
+  color: black;
+}
+
+.home_image {
+  max-width: 60%;
+  max-height: 90%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 20px;
+
+}
