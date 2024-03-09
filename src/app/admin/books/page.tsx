@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { deleteBook } from './delete';
 import './styles.css';
 import { FaEdit, FaRegTrashAlt } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 
 type BookType = {
   _uuid: string;
@@ -32,12 +33,19 @@ export default function Page() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>List of all books</h1>
+    <div className="full-admin">
+      <div className="manage-books">
+        <h1 className="manage-books-title">Manage books</h1>
+        <button className="create-button">
+          <Link className="create-link" href="/admin/books/new">
+            <FaPlus />
+            <p>Create a new book</p>
+          </Link>
+        </button>
+      </div>
       <div className="table-container">
         <table>
           <tr>
-            {' '}
             <th>Title</th>
             <th>Author</th>
             <th>Edit book</th>

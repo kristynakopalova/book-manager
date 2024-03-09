@@ -18,6 +18,7 @@ export default function Page() {
       'km5n2D0cYutereoe2VWmz20uN2DfTWOLc-ghZMf7hisC_cD5tg',
     ],
     fetcherWithAuth,
+    { refreshInterval: 1000 },
   );
 
   if (error) console.log(error);

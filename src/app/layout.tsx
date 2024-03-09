@@ -22,7 +22,7 @@ export default function RootLayout({
           <Link className="menu_item" href="/books">
             List of books
           </Link>
-          <Link className="menu_item" href="/admin">
+          <Link className="menu_item" href="/admin/books">
             Admin
           </Link>
         </header>

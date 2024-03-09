@@ -1,6 +1,5 @@
 import './styles.css';
 
-// TODO: předelat styl z body
 export default function Home() {
   return (
     <div className="full_page">

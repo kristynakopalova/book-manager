@@ -1,13 +1,12 @@
 .table-container {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
 table {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
-  border-collapse: collapse;
+
 }
 
 th,
@@ -18,7 +17,7 @@ td {
 }
 
 th {
-  background-color: #066ddc;
+  background-color: #007bff;
 }
 
 tr:hover {
@@ -32,9 +31,50 @@ tr:hover {
 }
 
 .edit-icon {
-  color: blue;
+  color: #007bff;
 }
 
 td {
   background-color: white;
+}
+
+.manage-books {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: solid #435d7d;
+  background-color: #435d7d;
+  color: black;
+
+}
+
+.manage-books-title {
+  margin: 0;
+  margin-left: 8px;
+}
+
+.full-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.create-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  height: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.create-button {
+  border: solid #28a745;
+  background-color: #28a745;
+  border-radius: 3%;
+  margin-right: 8px;
 }
