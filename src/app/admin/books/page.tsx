@@ -1,6 +1,8 @@
 'use client';
 import useSWR from 'swr';
 import { fetcherWithAuth } from '@/utils/fetcherWithAuth';
+import Link from 'next/link';
+import { deleteBook } from './delete';
 
 type BookType = {
   _uuid: string;
@@ -42,8 +44,12 @@ export default function Page() {
               <tr>
                 <td>{book.title}</td>
                 <td>{book.author}</td>
-                <td></td>
-                <td>Delete</td>
+                <td>
+                  <Link href={`/admin/books/${book._uuid}`}>Edit</Link>
+                </td>
+                <td>
+                  <button onClick={() => deleteBook(book._uuid)}>Delete</button>
+                </td>
               </tr>
             ))
           : 'No Data'}
