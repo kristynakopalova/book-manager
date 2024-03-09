@@ -1,5 +1,3 @@
-// TODO: clear form after submit
-// TODO: input type url
 import './styles.css';
 
 export default function Page() {
@@ -38,11 +36,9 @@ export default function Page() {
 
   return (
     <div className="form-container">
-      <h2>Create a new book:</h2> {/* Nadpis nad formulářem */}
+      <h2>Create a new book:</h2>
       <form className="form" action={createBook}>
         <div className="form-row">
-          {' '}
-          {/* Zvláštní řádek pro každou položku */}
           <label>Title</label>
           <input type="text" name="title" placeholder="title" />
         </div>
@@ -70,7 +66,9 @@ export default function Page() {
             placeholder="description"
           />
         </div>
-        <button type="submit">Create a new book</button>
+        <button className="submit-button" type="submit">
+          Create a new book
+        </button>
       </form>
     </div>
   );
