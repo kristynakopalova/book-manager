@@ -18,21 +18,17 @@ export default function Page() {
       'km5n2D0cYutereoe2VWmz20uN2DfTWOLc-ghZMf7hisC_cD5tg',
     ],
     fetcherWithAuth,
-    { refreshInterval: 1000 },
+    { refreshInterval: 500 },
   );
 
   if (error) console.log(error);
-  if (data) {
-    console.log('Data z API');
-    console.log(data.items);
-  }
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1 className="book_list_headline">List of all books</h1>
-      <div className="book_list">
+    <div className="book-list-page">
+      <h1 className="book-list-headline">List of all books</h1>
+      <div className="book-list">
         {data.items
           ? data.items.map((book: BookType) => (
               <Book

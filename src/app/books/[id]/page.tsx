@@ -13,24 +13,35 @@ export default function Page({ params }: { params: { id: string } }) {
   );
 
   if (error) console.log(error);
-  if (data) {
-    console.log('Data z API');
-    console.log(data);
-  }
 
   return (
     <>
       {data ? (
         <div className="book">
-          <h1>{data.title}</h1>
-          <div className="book_information">
-            <div className="more_information">
-              <p>Author: {data.author}</p>
-              <p>Publisher: {data.publisher} </p>
-              <p>Published: {data.published} </p>
-              <p>Description: {data.description}</p>
+          <h1 className="detail-headline">{data.title}</h1>
+          <div className="book-information">
+            <div className="more-information">
+              <p>
+                <strong>Author: </strong>
+                {data.author}
+              </p>
+              <p>
+                <strong>Publisher: </strong> {data.publisher}{' '}
+              </p>
+              <p>
+                <strong>Published: </strong>
+                {data.published}{' '}
+              </p>
+              <p>
+                <strong>Description: </strong>
+                {data.description}
+              </p>
             </div>
-            <img src={data.imageurl} alt={data.title} />
+            <img
+              className="detail-image"
+              src={data.imageurl}
+              alt={data.title}
+            />
           </div>
         </div>
       ) : (

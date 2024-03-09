@@ -6,7 +6,6 @@ import { updateBook } from '@/app/admin/books/[id]/update';
 
 export default function Page({ params }: { params: { id: string } }) {
   async function handleUpdate(formData: FormData) {
-    console.log(formData, params);
     await updateBook(formData, params.id);
     return;
   }
@@ -16,20 +15,16 @@ export default function Page({ params }: { params: { id: string } }) {
       'km5n2D0cYutereoe2VWmz20uN2DfTWOLc-ghZMf7hisC_cD5tg',
     ],
     fetcherWithAuth,
+    { refreshInterval: 500 },
   );
 
   if (error) console.log(error);
-  if (data) {
-    console.log('Data z API');
-    console.log(data);
-  }
 
   return (
     <div className="form-container">
       <h2>Update book</h2>
       <form className="form" action={handleUpdate}>
         <div className="form-row">
-          {' '}
           <label>Title</label>
           <input
             type="text"
@@ -83,7 +78,9 @@ export default function Page({ params }: { params: { id: string } }) {
             defaultValue={data?.description}
           />
         </div>
-        <button type="submit">Update book</button>
+        <button className="submit-button" type="submit">
+          Update book
+        </button>
       </form>
     </div>
   );

@@ -12,16 +12,43 @@ body {
   margin-top: 50px;
 }
 
-.book_information {
+.book-information {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   max-width: 800px;
-
 }
 
-.more_information {
+.more-information {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: 50px;
+  margin: auto;
+  max-width: 80%;
+}
+
+.detail-headline {
+  text-align: center;
+}
+
+.detail-image {
+  max-width: 80%;
+}
+
+@media (min-width: 850px) {
+  .book-information {
+    flex-direction: row;
+    margin-top: 0;
+    align-items: flex-start;
+  }
+
+  .more-information {
+    align-items: flex-start;
+  }
+
+  .detail-image {
+    margin: 5%;
+  }
 }

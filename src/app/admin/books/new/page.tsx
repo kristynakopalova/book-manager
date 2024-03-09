@@ -15,7 +15,6 @@ export default function Page() {
       },
     ];
 
-    console.log(data);
     try {
       const response = await fetch('https://crudapi.co.uk/api/v1/books', {
         method: 'POST',
@@ -28,7 +27,6 @@ export default function Page() {
       });
 
       const result = await response.json();
-      console.log('Success:', result);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -36,7 +34,7 @@ export default function Page() {
 
   return (
     <div className="form-container">
-      <h2>Create a new book:</h2>
+      <h2>Create a new book</h2>
       <form className="form" action={createBook}>
         <div className="form-row">
           <label>Title</label>

@@ -1,4 +1,5 @@
 'use server';
+
 export async function updateBook(formData: FormData, id: string) {
   const data = {
     title: formData.get('title'),
@@ -9,8 +10,6 @@ export async function updateBook(formData: FormData, id: string) {
     description: formData.get('description'),
   };
 
-  console.log(data);
-  console.log(`https://crudapi.co.uk/api/v1/books/${id}`);
   try {
     const response = await fetch(`https://crudapi.co.uk/api/v1/books/${id}`, {
       method: 'PUT',

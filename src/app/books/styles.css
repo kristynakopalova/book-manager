@@ -1,11 +1,17 @@
-.book_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-left: 10%;
-  margin-right: 10%;
+.book-list-page {
+  margin-top: 50px;
+
 }
 
-.book_list_headline {
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: calc(100% * (1/2));
+  margin: auto;
+}
+
+.book-list-headline {
   text-align: center;
 }

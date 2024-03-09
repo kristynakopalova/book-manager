@@ -11,7 +11,6 @@ export async function deleteBook(id: string) {
     });
 
     const result = await response.json();
-    console.log('Success:', result);
   } catch (error) {
     console.error('Error:', error);
   }
